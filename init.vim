@@ -1,11 +1,10 @@
-" Fjiwrefgjiowegjioergjioerjgrjiogjio
 set mouse+=a
 set colorcolumn=80
 set encoding=utf-8
 set number
 set noswapfile
 set scrolloff=7
-
+" wefowejfiowejfwejfi
 inoremap jk <esc>
 
 set tabstop=4
@@ -15,7 +14,6 @@ set expandtab
 set autoindent
 set fileformat=unix
 filetype indent on      " load filetype-specific indent files
-
 
 call plug#begin('~/.vim/plugged')
 
@@ -32,6 +30,8 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'Pocco81/AutoSave.nvim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'morhetz/gruvbox'  " colorscheme gruvbox
 Plug 'mhartington/oceanic-next'  " colorscheme OceanicNext
@@ -135,6 +135,10 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 
+let g:airline_theme='luna'
+let g:autosave_state=1
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=1
 lua << EOF
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
