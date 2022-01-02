@@ -1,9 +1,12 @@
+" Fjiwrefgjiowegjioergjioerjgrjiogjio
 set mouse+=a
-set colorcolumn=79
+set colorcolumn=80
 set encoding=utf-8
 set number
 set noswapfile
 set scrolloff=7
+
+inoremap jk <esc>
 
 set tabstop=4
 set softtabstop=4
@@ -12,6 +15,7 @@ set expandtab
 set autoindent
 set fileformat=unix
 filetype indent on      " load filetype-specific indent files
+
 
 call plug#begin('~/.vim/plugged')
 
@@ -27,6 +31,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'Pocco81/AutoSave.nvim'
 
 Plug 'morhetz/gruvbox'  " colorscheme gruvbox
 Plug 'mhartington/oceanic-next'  " colorscheme OceanicNext
@@ -133,6 +138,7 @@ highlight NvimTreeFolderIcon guibg=blue
 lua << EOF
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
 
 require('toggleterm').setup {
   open_mapping = [[<c-t>]],
@@ -273,7 +279,26 @@ cmp.setup {
 EOF
 
 
-
+lua << EOF
+local autosave = require("autosave")
+autosave.setup(
+    {
+        enabled = true,
+        execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
+        events = {"InsertLeave", "TextChanged"},
+        conditions = {
+            exists = true,
+            filename_is_not = {},
+            filetype_is_not = {},
+            modifiable = true
+        },
+        write_all_buffers = false,
+        on_off_commands = true,
+        clean_command_line_interval = 0,
+        debounce_delay = 135
+    }
+)
+EOF
 
 lua << EOF
 local nvim_lsp = require('lspconfig')
