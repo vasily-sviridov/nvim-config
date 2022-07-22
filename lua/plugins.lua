@@ -15,5 +15,6 @@ Plug "L3MON4D3/LuaSnip"
 Plug "mfussenegger/nvim-lint"
 Plug "nvim-lualine/lualine.nvim"
 Plug "romgrk/barbar.nvim"
+Plug "akinsho/toggleterm.nvim"
 
 vim.call("plug#end")
