@@ -4,7 +4,7 @@ require("keymaps")
 
 require("autosave_config")
 
-require("tree")
+require("tree_config")
 require("tree_keymaps")
 
 require("lsp_autocompletion")
