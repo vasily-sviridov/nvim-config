@@ -16,5 +16,7 @@ Plug "mfussenegger/nvim-lint"
 Plug "nvim-lualine/lualine.nvim"
 Plug "romgrk/barbar.nvim"
 Plug "akinsho/toggleterm.nvim"
+Plug "karb94/neoscroll.nvim"
+Plug "jiangmiao/auto-pairs"
 
 vim.call("plug#end")
