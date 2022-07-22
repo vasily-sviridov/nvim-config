@@ -18,6 +18,7 @@ nvim +PlugInstall +qall
 - [lsp](https://github.com/neovim/nvim-lspconfig) - LSP protocol support
 - [lualine](https://github.com/nvim-lualine/lualine.nvim) - bottom bar
 - [barbar](https://github.com/romgrk/barbar.nvim.git) - tabs
+- [toggleterm](https://github.com/akinsho/toggleterm.nvim) - terminal in separete window
 
 ## License
 
