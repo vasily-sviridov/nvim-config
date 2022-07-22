@@ -14,3 +14,6 @@ require("lualine_config")
 
 require("barbar_config")
 require("barbar_keymaps")
+
+require("toggleterm_config")
+require("toggleterm_keymaps")
