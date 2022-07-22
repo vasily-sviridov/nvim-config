@@ -6,6 +6,12 @@ This config was created to bring nvim closer to the capabilities of modern text 
 
 ## Getting Started
 
+### Required dependencies
+
+- neovim: 0.7 and above
+
+### Install
+
 Install package manager:
 ```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
