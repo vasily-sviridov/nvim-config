@@ -15,7 +15,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 Download config:
 
 ```shell
-git clone git@github.com:sviridovcomp/nvim-config.git ~/.config/nvim
+git clone https://github.com/sviridovcomp/nvim-config.git ~/.config/nvim
 nvim +PlugInstall +qall
 ```
 
