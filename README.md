@@ -6,6 +6,14 @@ This config was created to bring nvim closer to the capabilities of modern text 
 
 ## Getting Started
 
+Install package manager:
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+Download config:
+
 ```shell
 git clone git@github.com:sviridovcomp/nvim-config.git ~/.config/nvim
 nvim +PlugInstall +qall
