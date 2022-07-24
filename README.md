@@ -16,7 +16,9 @@ nvim +PlugInstall +qall
 - [lsp](https://github.com/neovim/nvim-lspconfig) - LSP protocol support
 - [lualine](https://github.com/nvim-lualine/lualine.nvim) - bottom bar
 - [barbar](https://github.com/romgrk/barbar.nvim.git) - tabs
-
+- [toggleterm](https://github.com/akinsho/toggleterm.nvim) - terminal in separete window
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs) - auto pairs brackets
+- [neoscroll](https://github.com/karb94/neoscroll.nvim) - smooth scrolling in neovim
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
