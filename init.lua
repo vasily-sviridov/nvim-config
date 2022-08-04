@@ -17,3 +17,7 @@ require("barbar_keymaps")
 
 require("toggleterm_config")
 require("toggleterm_keymaps")
+
+require("telescope_keymaps")
+
+require("comment_config")
