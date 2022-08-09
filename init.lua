@@ -2,8 +2,6 @@ require("plugins")
 require("settings")
 require("keymaps")
 
-require("autosave_config")
-
 require("tree_config")
 require("tree_keymaps")
 
