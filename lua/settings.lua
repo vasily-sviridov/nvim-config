@@ -13,10 +13,11 @@ opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
 opt.fileformat = "unix"
+opt.termguicolors = true
 
 cmd([[
 filetype indent plugin on
 syntax enable
-colorscheme xcodewwdc
+colorscheme xcodedark
 ]])
 
