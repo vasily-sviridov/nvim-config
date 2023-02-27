@@ -21,5 +21,7 @@ Plug "jiangmiao/auto-pairs"
 Plug "nvim-lua/plenary.nvim"
 Plug "nvim-telescope/telescope.nvim"
 Plug "numToStr/Comment.nvim"
+Plug "github/copilot.vim"
+Plug "rhysd/vim-clang-format"
 
 vim.call("plug#end")

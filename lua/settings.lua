@@ -19,5 +19,6 @@ cmd([[
 filetype indent plugin on
 syntax enable
 colorscheme xcodedark
+set clipboard+=unnamedplus
 ]])
 
