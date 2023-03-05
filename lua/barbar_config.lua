@@ -44,7 +44,7 @@ require'bufferline'.setup {
   insert_at_start = false,
 
   -- Sets the maximum padding width with which to surround each tab
-  maximum_padding = 1,
+  maximum_padding = 2,
 
   -- Sets the maximum buffer name length.
   maximum_length = 30,

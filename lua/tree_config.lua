@@ -6,7 +6,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       hijack_netrw = true,
       hijack_unnamed_buffer_when_opening = false,
       ignore_buffer_on_setup = false,
-      open_on_setup = false,
+      open_on_setup = true,
       open_on_setup_file = false,
       open_on_tab = false,
       ignore_buf_on_tab_change = {},
@@ -17,7 +17,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
       reload_on_bufenter = false,
       respect_buf_cwd = false,
       view = {
-        adaptive_size = false,
+        adaptive_size = true,
         centralize_selection = false,
         hide_root_folder = false,
         side = "left",
@@ -84,7 +84,7 @@ require("nvim-tree").setup { -- BEGIN_DEFAULT_OPTS
             },
           },
         },
-        special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+        special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "CMakeLists.txt" },
         symlink_destination = true,
       },
       hijack_directories = {

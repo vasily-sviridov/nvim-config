@@ -1,3 +1,4 @@
 require("toggleterm").setup{
-    shade_terminals = false
+    shade_terminals = true,
+    direction = "tab"
 }
