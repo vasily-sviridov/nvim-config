@@ -20,10 +20,40 @@ require'bufferline'.setup {
   exclude_ft = {'javascript'},
   exclude_name = {'package.json'},
 
-  -- Enable/disable icons
-  -- if set to 'numbers', will show buffer index in the tabline
-  -- if set to 'both', will show buffer index and icons in the tabline
-  icons = true,
+  icons = {
+    -- Configure the base icons on the bufferline.
+    buffer_index = false,
+    buffer_number = false,
+    button = '',
+    -- Enables / disables diagnostic symbols
+    diagnostics = {
+      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
+      [vim.diagnostic.severity.WARN] = {enabled = false},
+      [vim.diagnostic.severity.INFO] = {enabled = false},
+      [vim.diagnostic.severity.HINT] = {enabled = true},
+    },
+    filetype = {
+      -- Sets the icon's highlight group.
+      -- If false, will use nvim-web-devicons colors
+      custom_colors = false,
+
+      -- Requires `nvim-web-devicons` if `true`
+      enabled = true,
+    },
+    separator = {left = '▎', right = ''},
+
+    -- Configure the icons on the bufferline when modified or pinned.
+    -- Supports all the base icon options.
+    modified = {button = '●'},
+    pinned = {button = '車', filename = true, separator = {right = ''}},
+
+    -- Configure the icons on the bufferline based on the visibility of a buffer.
+    -- Supports all the base icon options, plus `modified` and `pinned`.
+    alternate = {filetype = {enabled = false}},
+    current = {buffer_index = true},
+    inactive = {button = '×'},
+    visible = {modified = {buffer_number = false}},
+  },
 
   -- If set, the icon color will follow its corresponding buffer
   -- highlight group. By default, the Buffer*Icon group is linked to the
@@ -32,11 +62,6 @@ require'bufferline'.setup {
   icon_custom_colors = false,
 
   -- Configure icons on the bufferline.
-  icon_separator_active = '▎',
-  icon_separator_inactive = '▎',
-  icon_close_tab = '',
-  icon_close_tab_modified = '●',
-  icon_pinned = '車',
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
