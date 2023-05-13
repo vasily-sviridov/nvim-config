@@ -19,3 +19,5 @@ require("toggleterm_keymaps")
 require("telescope_keymaps")
 
 require("comment_config")
+
+require("autoformat_config")
