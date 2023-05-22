@@ -3,9 +3,9 @@ local opt = vim.opt
 
 opt.encoding = "utf-8"
 opt.mouse = "a"
-opt.colorcolumn = '80'
+opt.colorcolumn = '120'
 opt.number = true
-opt.scrolloff = 7
+opt.scrolloff = 15
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.shiftwidth = 4
@@ -14,11 +14,16 @@ opt.autoindent = true
 opt.smartindent = true
 opt.fileformat = "unix"
 opt.termguicolors = true
+opt.list = true
+opt.listchars = "eol:↲,tab:» ,trail:·,extends:<,precedes:>,conceal:┊,nbsp:␣"
+opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
+opt.cursorline = true
 
 cmd([[
-filetype indent plugin on
+lan en_US.UTF-8
 syntax enable
 colorscheme xcodedark
 set clipboard+=unnamedplus
+autocmd BufWritePre * lua vim.lsp.buf.format()
 ]])
 

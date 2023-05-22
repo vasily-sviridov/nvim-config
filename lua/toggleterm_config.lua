@@ -1,4 +1,7 @@
-require("toggleterm").setup{
-    shade_terminals = true,
-    direction = "tab"
-}
+require("toggleterm").setup({
+	direction = "tab",
+	close_on_exit = false,
+	on_open = function(term)
+		vim.cmd("startinsert!")
+	end,
+})
