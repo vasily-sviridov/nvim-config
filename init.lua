@@ -1,5 +1,7 @@
 require("plugins")
+
 require("settings")
+
 require("keymaps")
 
 require("tree_config")
@@ -20,4 +22,10 @@ require("telescope_keymaps")
 
 require("comment_config")
 
-require("autoformat_config")
+require("fidget_config")
+
+require("indent-blankline_config")
+
+require("autopairs_config")
+
+require("neoscroll_config")
