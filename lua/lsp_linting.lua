@@ -1,6 +1,6 @@
 local nvim_lsp = require('lspconfig')
 
-local servers = {'clangd', 'tsserver', 'gopls', 'pylsp'}
+local servers = {'clangd', 'tsserver', 'gopls', 'pyright'}
 for _, server in ipairs(servers) do
   nvim_lsp[server].setup {
     on_attach = on_attach,
