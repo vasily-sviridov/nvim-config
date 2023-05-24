@@ -29,7 +29,7 @@ Plug "nvim-lua/plenary.nvim"
 Plug "j-hui/fidget.nvim"
 Plug "lukas-reineke/indent-blankline.nvim"
 Plug "tpope/vim-surround"
-
+Plug "Mofiqul/vscode.nvim"
 Plug "karb94/neoscroll.nvim"
 
 vim.call("plug#end")

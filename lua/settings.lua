@@ -22,7 +22,7 @@ opt.cursorline = true
 cmd([[
 lan en_US.UTF-8
 syntax enable
-colorscheme xcodedark
+colorscheme vscode
 set clipboard+=unnamedplus
 autocmd BufWritePre * lua vim.lsp.buf.format()
 ]])
