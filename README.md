@@ -2,6 +2,8 @@
 
 This config was created to bring nvim closer to the capabilities of modern text editors. Many plugins are bundled in the config to allow convenient development of your applications
 
+![Preview](https://github.com/vasily-sviridov/nvim-config/assets/50530767/2228c071-3552-4897-8caf-0a2c8cb13c37)
+
 ## Getting Started
 
 ### Required dependencies
