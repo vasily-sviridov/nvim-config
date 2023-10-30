@@ -20,17 +20,34 @@ require'bufferline'.setup {
   exclude_ft = {'javascript'},
   exclude_name = {'package.json'},
 
+  -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
+  hide = {extensions = true, inactive = true},
+
+  -- Disable highlighting alternate buffers
+  highlight_alternate = false,
+
+  -- Disable highlighting file icons in inactive buffers
+  highlight_inactive_file_icons = false,
+
+  -- Enable highlighting visible buffers
+  highlight_visible = true,
+
   icons = {
     -- Configure the base icons on the bufferline.
     buffer_index = false,
     buffer_number = false,
-    button = '',
+    button = '',
     -- Enables / disables diagnostic symbols
     diagnostics = {
       [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
       [vim.diagnostic.severity.WARN] = {enabled = false},
       [vim.diagnostic.severity.INFO] = {enabled = false},
       [vim.diagnostic.severity.HINT] = {enabled = true},
+    },
+    gitsigns = {
+      added = {enabled = true, icon = '+'},
+      changed = {enabled = true, icon = '~'},
+      deleted = {enabled = true, icon = '-'},
     },
     filetype = {
       -- Sets the icon's highlight group.
@@ -42,10 +59,14 @@ require'bufferline'.setup {
     },
     separator = {left = '▎', right = ''},
 
+    separator_at_end = true,
+
     -- Configure the icons on the bufferline when modified or pinned.
     -- Supports all the base icon options.
     modified = {button = '●'},
-    pinned = {button = '車', filename = true, separator = {right = ''}},
+    pinned = {button = '', filename = true},
+
+    preset = 'default',
 
     -- Configure the icons on the bufferline based on the visibility of a buffer.
     -- Supports all the base icon options, plus `modified` and `pinned`.

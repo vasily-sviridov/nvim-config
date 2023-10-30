@@ -1,5 +1,5 @@
 require("toggleterm").setup({
-	direction = "tab",
+	direction = "float",
 	close_on_exit = false,
 	on_open = function(term)
 		vim.cmd("startinsert!")
