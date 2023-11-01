@@ -21,7 +21,7 @@ require'bufferline'.setup {
   exclude_name = {'package.json'},
 
   -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
-  hide = {extensions = true, inactive = true},
+  hide = {extensions = false, inactive = false},
 
   -- Disable highlighting alternate buffers
   highlight_alternate = false,
@@ -34,7 +34,7 @@ require'bufferline'.setup {
 
   icons = {
     -- Configure the base icons on the bufferline.
-    buffer_index = false,
+    buffer_index = true,
     buffer_number = false,
     button = '',
     -- Enables / disables diagnostic symbols
@@ -66,8 +66,6 @@ require'bufferline'.setup {
     modified = {button = '●'},
     pinned = {button = '', filename = true},
 
-    preset = 'default',
-
     -- Configure the icons on the bufferline based on the visibility of a buffer.
     -- Supports all the base icon options, plus `modified` and `pinned`.
     alternate = {filetype = {enabled = false}},
@@ -86,8 +84,8 @@ require'bufferline'.setup {
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
-  insert_at_end = false,
-  insert_at_start = false,
+  -- insert_at_end = false,
+  -- insert_at_start = false,
 
   -- Sets the maximum padding width with which to surround each tab
   maximum_padding = 2,
